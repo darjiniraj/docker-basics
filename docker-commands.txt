@@ -1,0 +1,47 @@
+docker run ubuntu
+- Start a container, if image is not available in local, it will pull from docker hub
+
+docker run -it centos bash
+- Run docker container in interactive mode
+
+docker run -d ubuntu sleep 1000
+- Run container in background / detach mode for 1000 millisecond
+
+docker attach <ContainerID / ContainerName>
+- Attach to container
+
+docker run -p 80:5000 <ImageName>
+- Port mapping Docker Container(5000) to Docker Host(80)
+
+docker run ubunu:17.04
+- Pull ubuntu image of 17.04 version
+
+docker pull <ImageName>
+- Pull image from docker hub
+
+docker ps
+- Shows (running) containers
+
+docker ps -a
+- Running as well exited containers
+
+docker stop <ContainerID / ContainerName>
+- Stop a container
+
+docker rm <ContainerID / ContainerName>
+- Remove docker container from disk
+
+docker images
+- List all images 
+
+docker rmi <ImageName>
+- Remove image from disk
+
+docker exec <ContainerID / ContainerName> cat /etc/hosts
+- Execute command in running container
+
+# Volume
+
+docker run -v /opt/data:/var/lib/mysql mysql
+- Volume Mapping of /var/lib/mysql of docker container to /opt/data of docker hosts
+
